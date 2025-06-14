@@ -1,0 +1,70 @@
+body {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+  .background-container {
+    background-color: #fafafa;
+    height: 100vh;
+    width: 35%;
+    align-items: center;
+  }
+  .signup {
+    color: white;
+  }
+
+#s-number:focus {
+    border-color: #000000 !important; 
+    border-width: 2px !important; 
+    box-shadow: none !important; 
+}
+#password:focus {
+    border-color: #000000 !important;
+    border-width: 2px !important;
+    box-shadow: none !important;
+}
+
+.form-floating input:focus ~ label {
+    color: #000000 !important; 
+}
+.form-floating select:focus ~ label {
+    color: #000000 !important; 
+}
+.form-floating input {
+    border-color: #000000 !important;
+    border-width: 2px !important;
+    box-shadow: none !important;
+}
+.form-floating select {
+    border-color: #000000 !important;
+    border-width: 2px !important;
+    box-shadow: none !important;
+    text-align: center; /* Centers text in dropdown */
+    text-align-last: center; /* Centers selected option */
+}
+.btn-color  {
+    background-color: #160893 !important;
+    color: white !important;
+    border: none !important;
+}
+.csi {
+    font-weight: bold;
+    font-size : 80%;
+}
+.ptc {
+    font-size : 80%;
+    color: #565656;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.personal {
+    font-family: Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000;
+  }
+.ntc {
+    font-family: "Winky Sans", sans-serif;
+}

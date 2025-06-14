@@ -1,0 +1,61 @@
+<?php
+$conn = mysqli_connect("localhost", "root", "", "ntc_database");
+
+// Check connection
+if (!$conn) {
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// Personal Information
+$first_name = isset($_POST['first_name']) ? mysqli_real_escape_string($conn, $_POST['first_name']) : "";
+$last_name = isset($_POST['last_name']) ? mysqli_real_escape_string($conn, $_POST['last_name']) : "";
+$surname = isset($_POST['surname']) ? mysqli_real_escape_string($conn, $_POST['surname']) : "";
+$suffix = isset($_POST['suffix']) ? mysqli_real_escape_string($conn, $_POST['suffix']) : "";
+$student_number = isset($_POST['student_number']) ? mysqli_real_escape_string($conn, $_POST['student_number']) : "";
+$email = isset($_POST['email']) ? mysqli_real_escape_string($conn, $_POST['email']) : "";
+$gender = isset($_POST['gender']) ? mysqli_real_escape_string($conn, $_POST['gender']) : "";
+$birthdate = isset($_POST['birthdate']) ? mysqli_real_escape_string($conn, $_POST['birthdate']) : "";
+
+// Parents Information
+// Mother's Information
+$M_first_name = isset($_POST['M_first_name']) ? mysqli_real_escape_string($conn, $_POST['M_first_name']) : "";
+$M_last_name = isset($_POST['M_last_name']) ? mysqli_real_escape_string($conn, $_POST['M_last_name']) : "";
+$M_surname = isset($_POST['M_surname']) ? mysqli_real_escape_string($conn, $_POST['M_surname']) : "";
+$M_suffix = isset($_POST['M_suffix']) ? mysqli_real_escape_string($conn, $_POST['M_suffix']) : "";
+// Contact Information
+$M_email = isset($_POST['M_email']) ? mysqli_real_escape_string($conn, $_POST['M_email']) : "";
+$M_contact_number = isset($_POST['M_contact_number']) ? mysqli_real_escape_string($conn, $_POST['M_contact_number']) : "";
+$M_occupation = isset($_POST['M_occupation']) ? mysqli_real_escape_string($conn, $_POST['M_occupation']) : "";
+
+// Father's Information
+$F_first_name = isset($_POST['F_first_name']) ? mysqli_real_escape_string($conn, $_POST['F_first_name']) : "";
+$F_last_name = isset($_POST['F_last_name']) ? mysqli_real_escape_string($conn, $_POST['F_last_name']) : "";
+$F_surname = isset($_POST['F_surname']) ? mysqli_real_escape_string($conn, $_POST['F_surname']) : "";
+$F_suffix = isset($_POST['F_suffix']) ? mysqli_real_escape_string($conn, $_POST['F_suffix']) : "";
+// Contact Information
+$F_email = isset($_POST['F_email']) ? mysqli_real_escape_string($conn, $_POST['F_email']) : "";
+$F_contact_number = isset($_POST['F_contact_number']) ? mysqli_real_escape_string($conn, $_POST['F_contact_number']) : "";
+$F_occupation = isset($_POST['F_occupation']) ? mysqli_real_escape_string($conn, $_POST['F_occupation']) : "";
+
+// Insert Query 
+$sql = "INSERT INTO data_student 
+    (first_name, last_name, surname, suffix, student_number, email, gender, birthdate, 
+     M_first_name, M_last_name, M_surname, M_suffix, M_email, M_contact_number, M_occupation, 
+     F_first_name, F_last_name, F_surname, F_suffix, F_email, F_contact_number, F_occupation) 
+    VALUES 
+    ('$first_name', '$last_name', '$surname', '$suffix', '$student_number', '$email', '$gender', '$birthdate', 
+     '$M_first_name', '$M_last_name', '$M_surname', '$M_suffix', '$M_email', '$M_contact_number', '$M_occupation', 
+     '$F_first_name', '$F_last_name', '$F_surname', '$F_suffix', '$F_email', '$F_contact_number', '$F_occupation')";
+
+// Execute Query
+if (mysqli_query($conn, $sql)) {
+    echo "<script>alert('Records added successfully.');</script>";
+} else {
+    echo "<script>alert('mali bro');</script>";
+}
+
+// Close Connection
+mysqli_close($conn);
+}
+?>

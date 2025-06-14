@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        body {
+            overflow: auto;
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE and Edge */
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera */
+        }
+
+        .bg-image {
+            background-image: url('https://images.ctfassets.net/r7p9m4b1iqbp/B8znZdNyICw2UYMAguKk4/01e2c5f7848a87722d659d7e60447d36/Sky-G-Norway-23.jpg?w=1200&fm=webp&q=90');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            margin-top: 120px;
+            padding: 0 1rem;
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .intro-text {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .intro-text h1 {
+            font-family: 'Bungee Spice', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .intro-text p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .navbar-brand {
+            font-family: 'Bungee Spice', cursive;
+            font-size: 2rem;
+            color: #ff6b6b !important;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: white !important;
+            padding: 0.5rem 1rem;
+            margin: 0 0.3rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar {
+            background-color: rgba(19, 17, 17, 0.7);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(19, 17, 17, 0.7);
+            z-index: 1030;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 320px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-weight: 600;
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+        }
+
+        .card-text {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: rgba(19, 17, 17, 0.7);
+            color: white;
+            position: relative;
+            z-index: 2;
+            padding: 3rem 0 2rem;
+            margin-top: auto;
+        }
+
+        footer h5 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #ff6b6b;
+        }
+
+        footer p {
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: rgb(255, 166, 0);
+        }
+
+        .social-icons {
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons i {
+            font-size: 1.2rem;
+        }
+
+        .footer-links a {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: rgb(255, 166, 0);
+            transition: width 0.3s ease;
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            background-color: rgb(255, 166, 0);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .cta-btn:hover {
+            background-color: rgb(255, 144, 0);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background-color: rgba(0, 0, 0, 0.9);
+                padding: 1rem;
+                border-radius: 10px;
+                margin-top: 0.5rem;
+            }
+
+            .nav-link {
+                margin: 0.5rem 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .intro-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .intro-text p {
+                font-size: 1.1rem;
+            }
+
+            .hero-content {
+                margin-top: 100px;
+                gap: 1.5rem;
+            }
+
+            .card {
+                max-width: 280px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card {
+                width: 90%;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+
+            .footer-links a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+
+            .social-icons a {
+                width: 35px;
+                height: 35px;
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-image">
+        <div class="overlay"></div>
+
+        <nav class="navbar navbar-expand-lg fixed-top px-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">CarVibe</a>
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/info">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <div class="intro-text">
+                <h1>Service CarVibe</h1>
+                <p>Here are our services that we provided for our customers, to ensure the quality and comfort for our beloved customers.</p>
+            </div>
+            
+            <!-- Who We Are -->
+            <div class="card bg-light text-dark">
+                <img src="https://t3.ftcdn.net/jpg/02/79/67/00/360_F_279670083_6Q2SmbCUEYU3ucziI2trGspNIApgzB2v.jpg" class="card-img-top" alt="Team">
+                <div class="card-body">
+                    <h5 class="card-title">Service Maintenance</h5>
+                    <p class="card-text">we make sure that our cars is full Maintenance, good conditon and also to ensure our clients/customers are feel the comfortable in our rental cars.</p>
+                </div>
+            </div>
+
+            <!-- What We Offer -->
+            <div class="card bg-light text-dark">
+                <img src="https://gimgs2.nohat.cc/thumb/f/640/basic-wash-car-wash-logo-black-and-white-free-transparent-png--comdlpng6946571.jpg" class="card-img-top" alt="Services">
+                <div class="card-body">
+                    <h5 class="card-title">Our Rental car is always clean</h5>
+                    <p class="card-text">everyday, we clean our Rental car exterior and interior so our customers feel the comfort and well cleaned vehicle.</p>
+                </div>
+            </div>
+
+            
+            <!-- Why Choose CarVibe -->
+            <div class="card bg-light text-dark">
+                <img src="https://media.istockphoto.com/id/1967545849/vector/customer-care-icon-with-thin-line-hands-simple-linear-trend-human-resource-logotype-graphic.jpg?s=612x612&w=0&k=20&c=gdeDlrh8GzgHI68pa-zUZm6SeZt-_JCjT5BJLDfnb6c=" class="card-img-top" alt="Trust">
+                <div class="card-body">
+                    <h5 class="card-title">affordable rates and customer loyalty</h5>
+                    <p class="card-text">we offer a friendly and affordable rates in our customer plus customer loyalty so they enjoy discount in our rental car.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-5">
+            <div class="container text-center">
+                <h5 style="font-family: 'Bungee Spice', cursive;">CarVibe</h5>
+                <p>Your trusted partner for smooth, stylish, and reliable car rentals worldwide.</p>
+
+                <div class="footer-links mb-4">
+                    <a href="/about">About Us</a>
+                    <a href="/use">Terms of Use</a>
+                    <a href="/policy">Privacy Policy</a>
+                </div>
+
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-discord"></i></a>
+                    <a href="#"><i class="bi bi-tiktok"></i></a>
+                </div>
+
+                <p class="mb-0" style="font-size: 14px;">&copy; 2025 CarVibe. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
