@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Execute Query
         if (mysqli_query($conn, $sql)) {
-            echo "<script>alert('Registration successful! Your default password has been sent to your email.');</script>";
+            echo "<script>alert('Registration successful! Your default password has been sent to your email.'); window.location.href = '01-sign-in.php';</script>";
 
            
         } else {
@@ -134,8 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } catch (Exception $email) {
         }
     }
-     header("Location:" . $_SERVER['PHP_SELF'] . "");
-            exit();
+ 
 }
 // Close Connection
 mysqli_close($conn);
@@ -279,7 +278,7 @@ mysqli_close($conn);
             </div>
             <div class="col-md-4">
                 <div class="form-floating">
-                    <input class="form-control" type="email" id="M_email" name="M_email" placeholder="EMAIL ADDRESS" required autocomplete="off" style="text-transform: uppercase;">
+                    <input class="form-control" type="text" id="M_email" name="M_email" placeholder="EMAIL ADDRESS" required autocomplete="off" style="text-transform: uppercase;">
                     <label>EMAIL ADDRESS</label>
                 </div>
             </div>
@@ -333,7 +332,7 @@ mysqli_close($conn);
             </div>
             <div class="col-md-4">
                 <div class="form-floating">
-                    <input class="form-control" type="email" placeholder="EMAIL ADDRESS" id="F_email" name="F_email" required autocomplete="off" style="text-transform: uppercase;">
+                    <input class="form-control" type="text" placeholder="EMAIL ADDRESS" id="F_email" name="F_email" required autocomplete="off" style="text-transform: uppercase;">
                     <label>EMAIL ADDRESS</label>
                 </div>
             </div>
