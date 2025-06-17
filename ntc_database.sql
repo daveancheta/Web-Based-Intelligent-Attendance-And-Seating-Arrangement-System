@@ -92,12 +92,6 @@ CREATE TABLE `bot_assistant` (
 --
 -- Dumping data for table `bot_assistant`
 --
-
-INSERT INTO `bot_assistant` (`id`, `concern`, `response`, `link`) VALUES
-(3, 'i forgot my password', 'I can help you with that. Please click the link below and enter your verified or registered email account. The password will be sent to your email address.', 'http://localhost/NATIONAL%20TEACHERS%20COLLEGE/01-STUDENTS/19-forgot-student-number.php'),
-(4, 'How to contact admin', 'For assistance, please contact the admin:\r\nPhone Number: +63 93586754463\r\nEmail: support@attendance.monitoring.ph\r\n', ''),
-(12, 'Who is the developer of this system?', 'The main developer of this system is Heaven Dave Ancheta, in collaboration with Rj Alagar, Russel Alvia, Christian Calubad, Jhan De Vera, Julius Go, and Ion Dale.', '');
-
 -- --------------------------------------------------------
 
 --
@@ -113,27 +107,6 @@ CREATE TABLE `dat` (
 --
 -- Dumping data for table `dat`
 --
-
-INSERT INTO `dat` (`id`, `email`, `password`) VALUES
-(76, 'daveancheta0121@gmail.com', 'abc123'),
-(77, 'daveancheta0121@gmail.com', 'abc123'),
-(78, 'rj.alagar.rja@gmail.com', 'abc123'),
-(79, '423001159@ntc.edu.ph', 'abc123'),
-(80, '423001159@ntc.edu.ph', 'abc123'),
-(81, 'rja@gmail.com', 'abc123'),
-(82, 'jhannichold@gmail.com', 'abc123'),
-(83, 'jhannichold@gmail.com', 'abc123'),
-(84, 'jhannichold@gmail.com', 'abc123'),
-(85, 'jhannichold@gmail.com', 'abc123'),
-(86, 'jhannichold@gmail.com', 'abc123'),
-(87, 'Funtimed22@gmail.com', 'abc123'),
-(88, '423001202@ntc.edu.ph', 'abc123'),
-(89, 'asdasd@dasdasd', 'abc123'),
-(90, 'adasdasdasdasd@asdasd', 'abc123'),
-(91, 'daveancheta8@gmail.com', 'abc123'),
-(92, 'daveancheta8@gmail.com', 'abc123'),
-(93, 'daveancheta8@gmail.com', 'abc123'),
-(94, '423001202@ntc.edu.ph', 'abc123');
 
 -- --------------------------------------------------------
 
@@ -176,17 +149,6 @@ CREATE TABLE `data_student` (
 -- Dumping data for table `data_student`
 --
 
-INSERT INTO `data_student` (`id`, `first_name`, `middle_name`, `surname`, `suffix`, `image_path`, `profile_pic_status`, `block_sec`, `student_number`, `email`, `gender`, `birthdate`, `password`, `M_first_name`, `M_surname`, `M_suffix`, `M_email`, `M_contact_number`, `M_occupation`, `F_first_name`, `F_surname`, `F_suffix`, `F_email`, `F_contact_number`, `F_occupation`, `created_at`, `M_middle_name`, `F_middle_name`) VALUES
-(75, 'heaven dave', 'quimpo', 'ancheta', 'N/A', 'uploads/684aa408f14b6.jpeg', 'edit', '', '423001202', 'daveancheta8@gmail.com', 'Male', '2025-06-12', 'ancheta', 'rachel', 'quimpo', 'N/A', 'daveancheta0121@gmail.com', '098675647321', 'ceo', 'roel', 'ancheta', 'N/A', 'daveancheta411@gmail.com', '09768564738', 'ceo', '2025-06-12 08:18:32', 'gesmundo', 'dela cruz'),
-(76, 'rafael john', 'nazareno', 'alagar', 'N/A', 'uploads/684d2dac8e40e.jpeg', 'edit', '', '423000882', 'rj.alagar.rja@gmail.com', 'Male', '2024-10-31', 'dayzz1234', 'matea', 'alagar', 'N/A', '423000882@ntc.edu.ph', '0956822441', 'n/a', 'ray anthony', 'alagar', 'N/A', '423000882@ntc.edu.ph', '09568269536', 'N/a', '2025-06-14 08:00:21', 'reyes', 'nazareno'),
-(77, 'christian', 'legaspi', 'calubad', 'N/A', 'uploads/684d2db99edad.jpg', 'edit', '', '423001159', '423001159@ntc.edu.ph', 'Male', '2004-02-02', 'ionpogi123', 'estella', 'calubad ', 'N/A', 'estella@gmail.com', '09555101722', 'house wife', 'jose judy', 'calubad', 'N/A', 'jud@gmail.com', '09174457872', 'driver', '2025-06-14 08:04:05', 'caña', 'rollan'),
-(78, 'rj', 'nazareno', 'alagar', 'N/A', '', 'add', '', '4233000', 'rja@gmail.com', 'Male', '2025-06-14', 'abc123', 'sheeshh', 'alagar', 'N/A', 'rja@gmail.com', '0943551198', 'N/a', 'ray', 'alagar', 'N/A', 'rja@gmail.com', '095551617', 'n/a', '2025-06-14 08:04:18', 'okay', 'okay'),
-(80, 'Jhan nichol ', 'Gabarda', 'De vera', '', 'uploads/6801bb244b904.jpg', 'add', '12', '423002008', 'Funtimed22@gmail.com', 'Male', '2004-11-02', 'abc123', 'Janice ', 'De Vera ', '', 'Funtimed22@gmail.com', '09672472734', 'Accountant ', 'Nico', 'De Vera ', '', 'Funtimed22@gmail.com', '09672472734', 'N/a', '2025-06-14 08:18:40', 'Gabarda', 'Gabarda'),
-(81, 'asdasd', 'asdasd', 'asd', 'N/A', '', 'add', '', '123131', 'asdasd@dasdasd', 'Male', '2025-06-14', 'abc123', 'dasdas', 'asdas', 'N/A', 'adasdasd2@dasdasd', '2313123', 'asdasda', 'asdasd', 'aasdasd', 'III', 'asdsad@dasdas', '2312313', 'asdasd', '2025-06-14 15:33:16', 'asdasdasd', 'dasdasd'),
-(82, 'dasdasd', 'asdasd', 'asdas', 'N/A', '', 'add', '', '231312312', 'adasdasdasdasd@asdasd', 'Male', '2025-06-14', 'abc123', 'dasdasdas', 'asdas', 'N/A', 'dasd@dasdasdas', '2312312', 'dasdasda', 'dasd', 'asdas', 'Sr', 'Dasdad@dasda', '2313123123', 'dasdasd', '2025-06-14 15:35:42', 'asdasd', 'dasdasd'),
-(83, 'asdasdasd', 'asdasdasdasd', 'asdasd', '', '', 'add', '', '231123', 'daveancheta8@gmail.com', 'Male', '2025-06-14', 'abc123', 'dasdadas', 'asdas', 'N/A', 'sdasdasasdas@dasdas', '231312', 'dasdasdasasda', 'asdasdas', 'sdasd', 'Sr', 'dsadas@adasd', '312313131312', 'dadasdasda', '2025-06-14 15:36:40', 'dasdas', 'dasdasd'),
-(84, 'dasdasdas', 'dasdas', 'asdas', 'Jr.', '', 'add', '', '231312', 'daveancheta8@gmail.com', 'Male', '2025-06-14', 'abc123', 'asdas', 'asd', 'N/A', '2adasd@dasdasd', '231231', 'asdasdas', 'dasdas', 'asdasdas', 'Sr', 'asdasda@dasdasd', '31123123', 'asdasdasd', '2025-06-14 15:38:40', 'dasdasdas', 'dasda'),
-(85, 'heaven dave', 'quimpo', 'ancheta', 'N/A', 'uploads/684d98eb9b9cd.jpg', 'edit', '', '423001205', '423001202@ntc.edu.ph', 'Male', '2025-06-14', 'abc123', 'rachel', 'quimpo', 'N/A', 'daveancheta411@gmail.com', '097685746323', 'ceo', 'roel', 'ancheta', 'N/A', 'daveancheta0121@gmail.com', '098768956472', 'ceo', '2025-06-14 15:43:23', 'gesmundo', 'dela cruz');
 
 -- --------------------------------------------------------
 
@@ -205,10 +167,6 @@ CREATE TABLE `emailapprove` (
 --
 -- Dumping data for table `emailapprove`
 --
-
-INSERT INTO `emailapprove` (`id`, `student_number`, `email`, `password`, `approved_at`) VALUES
-(1, 0, 'daveancheta8@gmail.com', '$2y$10$xwfUzdNcGpFC0wVExL8WaO8eV7QbdFWDjRo0xR6Z0B8JAEZ6oEcXW', '2025-03-18 13:18:33'),
-(3, 423001202, 'saxpadofficial@gmail.com', 'dave', '2025-03-18 13:38:42');
 
 -- --------------------------------------------------------
 
@@ -231,12 +189,6 @@ CREATE TABLE `files` (
 --
 -- Dumping data for table `files`
 --
-
-INSERT INTO `files` (`id`, `room_id`, `user_name`, `filename`, `original_name`, `filepath`, `filetype`, `filesize`, `uploaded_at`) VALUES
-(1, 19, '423001202', '6811f7a52b71d.pdf', 'WEEK 11 and 12 ACTIVITIES.pdf', 'uploads/6811f7a52b71d.pdf', 'application/pdf', 38843, '2025-04-30 10:12:53'),
-(2, 19, '423001202', '6811f7ac28e46.png', 'Screenshot 2025-03-15 081934.png', 'uploads/6811f7ac28e46.png', 'image/png', 2131580, '2025-04-30 10:13:00'),
-(3, 19, '423001202', '6811f7d38ed34.pdf', 'ACTIVITY 6 MT.pdf', 'uploads/6811f7d38ed34.pdf', 'application/pdf', 132977, '2025-04-30 10:13:39'),
-(4, 19, '423001513', '6811f8014e772.jpg', 'IMG20250429174214_BURST001_COVER.jpg', 'uploads/6811f8014e772.jpg', 'image/jpeg', 4220808, '2025-04-30 10:14:25');
 
 -- --------------------------------------------------------
 
@@ -284,16 +236,6 @@ CREATE TABLE `info_ass` (
 --
 -- Dumping data for table `info_ass`
 --
-
-INSERT INTO `info_ass` (`id`, `seat_number`, `student_number`, `student_name`, `taken_at`, `subject`, `block`, `class_time`, `class_days`, `room`, `professor`, `timein`, `date`, `M_email`, `F_email`, `status`) VALUES
-(71, 'S1', '423001203', '', '2025-05-03 17:54:53', ' Systems Analysis and Design', 'Block 2.3', '07:00am - 10:00am', 'S', '101', 'Pacer, Joshua', '', '', '', '', ''),
-(77, 'S100', '423001203', '', '2025-05-03 17:54:53', ' Systems Analysis and Design', 'Block 2.3', '07:00am - 10:00am', 'S', '101', 'Pacer, Joshua', '', '', '', '', ''),
-(78, 'S5', '423001204', '', '2025-05-03 17:54:53', ' Systems Analysis and Design', 'Block 2.3', '07:00am - 10:00am', 'S', '101', 'Pacer, Joshua', '', '', '', '', ''),
-(88, 'S60', '423001202', 'heaven dave quimpo ancheta', '2025-06-12 17:56:37', ' Systems Analysis and Design', 'Block 2.3', '07:30am - 09:30am', 'M/TH', '101', 'Pacer, Joshua', '11:26:44 AM', 'June 17, 2025', 'daveancheta411@gmail.com', 'daveancheta0121@gmail.com', 'present'),
-(89, 'S1', '423002008', 'Jhan nichol  Gabarda De vera', '2025-06-14 16:27:27', 'Wika, Kultura at Lipunan: Introduksyon sa Sosyolinggwistika', 'Block 2.3', '07:30am - 09:30am', 'M/TH', '101', 'Gallozo, Helen', '04:47:10 PM', 'June 14, 2025', 'Funtimed22@gmail.com', 'Funtimed22@gmail.com', 'present'),
-(90, 'S4', '423001159', 'christian legaspi calubad', '2025-06-14 16:42:27', 'Wika, Kultura at Lipunan: Introduksyon sa Sosyolinggwistika', 'Block 2.3', '07:30am - 09:30am', 'M/TH', '101', 'Gallozo, Helen', '', '', '', '', ''),
-(91, 'S30', '423001205', 'heaven dave quimpo ancheta', '2025-06-14 23:49:21', ' Systems Analysis and Design', 'Block 2.3', '07:30am - 09:30am', 'M/TH', '101', 'Pacer, Joshua', '', '', '', '', '');
-
 -- --------------------------------------------------------
 
 --
@@ -312,27 +254,6 @@ CREATE TABLE `messages` (
 --
 -- Dumping data for table `messages`
 --
-
-INSERT INTO `messages` (`user_id`, `room_id`, `user_name`, `message`, `timestamp`, `created_at`) VALUES
-(1662, 19, 'Pacer, Joshua', 'Pacer, Joshua joined the chat', '2025-06-14 08:21:27', '2025-06-14 08:21:27'),
-(1663, 19, 'Jhan nichol', 'left the chat', '2025-06-14 08:21:29', '2025-06-14 08:21:29'),
-(1664, 19, 'Pacer, Joshua', 'left the chat', '2025-06-14 08:21:33', '2025-06-14 08:21:33'),
-(1665, 19, 'heaven dave', 'heaven dave joined the chat', '2025-06-14 15:44:12', '2025-06-14 15:44:12'),
-(1666, 19, 'heaven dave', 'hii', '2025-06-14 15:44:15', '2025-06-14 15:44:15'),
-(1667, 19, 'heaven dave', 'left the chat', '2025-06-14 15:44:17', '2025-06-14 15:44:17'),
-(1668, 19, 'Pacer, Joshua', 'Pacer, Joshua joined the chat', '2025-06-14 15:52:37', '2025-06-14 15:52:37'),
-(1669, 19, 'Pacer, Joshua', 'good evening students', '2025-06-14 15:52:46', '2025-06-14 15:52:46'),
-(1670, 19, 'Pacer, Joshua', 'left the chat', '2025-06-14 15:52:48', '2025-06-14 15:52:48'),
-(1671, 19, 'Pacer, Joshua', 'Pacer, Joshua joined the chat', '2025-06-14 16:07:04', '2025-06-14 16:07:04'),
-(1672, 19, 'Pacer, Joshua', 'HIHIHIHIH', '2025-06-14 16:07:07', '2025-06-14 16:07:07'),
-(1673, 19, 'Pacer, Joshua', 'left the chat', '2025-06-14 16:07:08', '2025-06-14 16:07:08'),
-(1674, 19, 'Pacer, Joshua', 'Pacer, Joshua joined the chat', '2025-06-14 16:08:21', '2025-06-14 16:08:21'),
-(1675, 19, 'Pacer, Joshua', 'asdasdasdasdsadasd', '2025-06-14 16:08:23', '2025-06-14 16:08:23'),
-(1676, 19, 'Pacer, Joshua', 'left the chat', '2025-06-14 16:08:24', '2025-06-14 16:08:24'),
-(1677, 19, 'heaven dave', 'heaven dave joined the chat', '2025-06-17 03:30:11', '2025-06-17 03:30:11'),
-(1678, 19, 'heaven dave', 'nigga', '2025-06-17 03:30:14', '2025-06-17 03:30:14'),
-(1679, 19, 'heaven dave', 'left the chat', '2025-06-17 03:30:16', '2025-06-17 03:30:16'),
-(1680, 19, 'heaven dave', 'heaven dave joined the chat', '2025-06-17 03:34:26', '2025-06-17 03:34:26');
 
 -- --------------------------------------------------------
 
@@ -372,16 +293,6 @@ CREATE TABLE `rooms` (
 -- Dumping data for table `rooms`
 --
 
-INSERT INTO `rooms` (`id`, `name`, `created_at`, `password`) VALUES
-(19, 'BSIT - 2.1', '2025-03-22 11:56:40', '$2y$10$QJKvz9W9PgymVEv8YWjp5OkQ/yuzMt7xlYOCjyavZlnLRF/52xvQ6'),
-(20, 'BSIT - 2.2', '2025-03-22 11:56:58', '$2y$10$eBSBxlqSB4hw08/xTU.9cuR1qSy0Ks0NzvC5yVC1IX790F0AEjjN.'),
-(21, 'BSIT - 2.3', '2025-03-22 11:57:09', '$2y$10$DSVE0OvduaHTM9NDWlVB/urEVNl3hBNwVP8v6kDZC10wIHPl5eGiS'),
-(22, 'BSIT - 2.4', '2025-03-22 11:57:17', '$2y$10$i1OA3RcxTKgQ5N592YoFXOLtMoOTy0Ff/OY.F9jrb0pHY/hhelZhe'),
-(23, 'BSIT - 2.5', '2025-03-22 11:57:32', '$2y$10$iEddSHYhjnHJEiiXcLP/COBYqskj3VLF7ZC8qoLU56INGk6fhG2GG'),
-(24, 'BSIT - 2.6', '2025-03-22 11:57:42', '$2y$10$/V4cdjVN.FNCgkYt8DUxH.vH2NHWURTparvnYF6aS31zFz8zTUWQC'),
-(25, 'BSIT - 2.7', '2025-03-22 11:57:58', '$2y$10$9u1C6nWgit2HuPh5E8FD8uWewuacB/L3kmD5kpVF334WPLiNJSv1a'),
-(31, 'BSIT - 4.1', '2025-06-11 06:09:50', '$2y$10$cjIc5SWE6xVCzrsGhUpQvOdEh2/4tAmsAjbGtVIMrcVN7QqS1QRmC');
-
 -- --------------------------------------------------------
 
 --
@@ -402,19 +313,6 @@ CREATE TABLE `room_101` (
 --
 -- Dumping data for table `room_101`
 --
-
-INSERT INTO `room_101` (`id`, `block`, `professor`, `start_time`, `end_time`, `subject`, `day`, `password`) VALUES
-(67, 'Block 2.3', 'Gallozo, Helen', '07:30:00', '09:30:00', 'Wika, Kultura at Lipunan: Introduksyon sa Sosyolinggwistika', 'M/TH', 'DvQJfWfJYq'),
-(68, 'Block 2.3', 'Pacer, Joshua', '13:00:00', '22:00:00', 'IT Elective 1', 'S', 'IJrYkXxARU'),
-(69, 'Block 2.3', 'Pacer, Joshua', '07:30:00', '09:30:00', ' Systems Analysis and Design', 'M/TH', 'xtVD34xqSK'),
-(70, 'Block 2.3', 'Pacer, Joshua', '10:30:00', '11:30:00', ' Systems Analysis and Design w/Lab', 'M/TH', 'BHrzpNfgY1'),
-(71, 'Block 2.3', 'Bunag, Rodessa', '15:00:00', '16:00:00', 'Information Assurance and Security 1 w/ LAB', 'T/F', 'Vdaedw2U0J'),
-(72, 'Block 2.3', 'Bunag, Rodessa', '13:30:00', '15:00:00', 'Information Assurance and Security 1 ', 'T/F', 'pvv839UJZ6'),
-(73, 'Block 2.3', 'Pacer, Joshua', '15:00:00', '16:30:00', 'Object Oriented Programming ', 'M/TH', 'X6uJM18WWy'),
-(74, 'Block 2.3', 'Pacer, Joshua', '16:30:00', '17:30:00', 'Object Oriented Programming w/LAB', 'M/TH', 'iLRGmTCur2'),
-(75, 'Block 2.3', 'Gatus, Joanah Vidth', '13:30:00', '15:54:00', 'Physical Education 4', 'S', '9nmyeyg6tM'),
-(79, 'Block 2.3', 'T/F', '09:47:00', '21:47:00', 'Information Assurance and Security 1 w/ LAB', 'Rodessa Bunag', 'eS7VUoz9f5'),
-(80, 'Block 2.3', 'M/TH', '09:00:00', '11:00:00', 'Python', 'Pacer, Joshua	', 'gY7acTheF2');
 
 -- --------------------------------------------------------
 
@@ -2552,8 +2450,7 @@ CREATE TABLE `teacher_accounts` (
 -- Dumping data for table `teacher_accounts`
 --
 
-INSERT INTO `teacher_accounts` (`id`, `email`, `fullname`, `password`, `image_path`, `profile_pic_status`, `created_at`) VALUES
-(1, 'jo.pacer@ntc.edu.ph', 'Pacer, Joshua', 'abc123', 'uploads/teachers/683701cf0ea85.jpg', 'edit', '2025-05-01 12:50:03');
+
 
 -- --------------------------------------------------------
 
@@ -2572,10 +2469,6 @@ CREATE TABLE `typing_status` (
 -- Dumping data for table `typing_status`
 --
 
-INSERT INTO `typing_status` (`room_id`, `user_name`, `is_typing`, `last_updated`) VALUES
-(19, 'christian', 0, '2025-06-14 08:20:10'),
-(19, 'dav', 0, '2025-05-08 05:18:34'),
-(19, 'rafael john', 0, '2025-06-14 08:16:58');
 
 -- --------------------------------------------------------
 
@@ -2596,9 +2489,6 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `otp`, `otp_expires`, `created_at`) VALUES
-(1, 'daveancheta8@gmail.com', '$2y$10$xwfUzdNcGpFC0wVExL8WaO8eV7QbdFWDjRo0xR6Z0B8JAEZ6oEcXW', '835664', '2025-03-18 14:27:55', '2025-03-18 13:17:55'),
-(4, 'saxpadofficial@gmail.com', '$2y$10$GT2hm.l9sLxF6hhIJ2jB/.SCuwjoUPxlTzhgEYnFcnHrcA2tki5DW', '443353', '2025-03-18 14:48:19', '2025-03-18 13:38:19');
 
 -- --------------------------------------------------------
 
